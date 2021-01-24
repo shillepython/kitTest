@@ -7,12 +7,8 @@
 
     <x-main>
 
-        <livewire:test.card />
+        <livewire:test.card :test="$testsCard"/>
 
     </x-main>
-
-
-
-
 
 </x-app-layout>

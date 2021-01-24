@@ -2,7 +2,7 @@
     <x-jet-nav-link href="{{ route('welcome') }}" :active="request()->routeIs('welcome')">
         {{ __('Home') }}
     </x-jet-nav-link>
-    <x-jet-nav-link href="{{ route('test') }}" :active="request()->routeIs('test')">
+    <x-jet-nav-link href="{{ route('test.index') }}" :active="request()->routeIs('test')">
         {{ __('Test') }}
     </x-jet-nav-link>
     <x-jet-nav-link href="{{ route('article') }}" :active="request()->routeIs('article')">

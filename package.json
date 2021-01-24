@@ -8,7 +8,8 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "serv":  "php artisan serv"
+        "serv":  "php artisan serv",
+        "seed":  "php artisan migrate:refresh && php artisan db:seed  --class=TestSeeder"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.2.1",

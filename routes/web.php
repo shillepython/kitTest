@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use \App\Http\Controllers\TestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route Home
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/test', function () {
-    return view('test');
-})->name('test');
 
+//Route Test
+Route::middleware(['auth:sanctum', 'verified'])
+    ->resource('/test', TestController::class)
+    ->name('*','test');
+
+//Route News
 Route::middleware(['auth:sanctum', 'verified'])->get('/article', function () {
     return view('article');
 })->name('article');
+
+
+

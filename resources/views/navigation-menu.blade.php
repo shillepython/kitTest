@@ -62,7 +62,7 @@
             <x-jet-responsive-nav-link href="{{ route('welcome') }}" :active="request()->routeIs('welcome')">
                 {{ __('Home') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('test') }}" :active="request()->routeIs('test')">
+            <x-jet-responsive-nav-link href="{{ route('test.index') }}" :active="request()->routeIs('test')">
                 {{ __('Test') }}
             </x-jet-responsive-nav-link>
             <x-jet-responsive-nav-link href="{{ route('article') }}" :active="request()->routeIs('article')">
