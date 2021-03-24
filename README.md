@@ -3,8 +3,8 @@
 <h2>comm:</h2>
 php artisan migrate <br>
 php artisan db:seed --class=PermissionsSeeder <br>
-login: "shillenetwork@gmail.com" <br>
-pass: "password" <br>
+login: <b>"shillenetwork@gmail.com"</b> <br>
+pass: <b>"password"</b> <br>
   <br> <br>
  
 <h2>Info</h2>
