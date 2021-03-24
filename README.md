@@ -1,7 +1,8 @@
-KitTest v0.2
-
-comm:
-php artisan migrate
-php artisan db:seed --class=PermissionsSeeder
-login: "shillenetwork@gmail.com"
-pass: "password"
+KitTest v0.2 <br>
+<br><br>
+comm: <br>
+php artisan migrate <br>
+php artisan db:seed --class=PermissionsSeeder <br>
+login: "shillenetwork@gmail.com" <br>
+pass: "password" <br>
+ 
