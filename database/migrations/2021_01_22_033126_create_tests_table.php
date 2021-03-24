@@ -18,6 +18,7 @@ class CreateTestsTable extends Migration
             $table->string('title');
             $table->text('desc');
             $table->string('image')->nullable();
+            $table->integer('timer');
             $table->timestamps();
         });
     }

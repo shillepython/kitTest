@@ -5,6 +5,8 @@
         </h2>
     </x-slot>
 
+    <livewire:alert-success/>
+
     <x-main>
 
         <livewire:test.card :test="$testsCard"/>

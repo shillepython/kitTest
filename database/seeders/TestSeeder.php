@@ -19,8 +19,5 @@ class TestSeeder extends Seeder
     public function run()
     {
         User::factory()->create();
-        Test::factory()->count(1)->create();
-        Question::factory()->count(12)->create();
-        Answer::factory()->count(60)->create();
     }
 }

@@ -8,10 +8,11 @@
         "hot": "mix watch --hot",
         "prod": "npm run production",
         "production": "mix --production",
-        "serv":  "php artisan serv",
-        "seed":  "php artisan migrate:refresh && php artisan db:seed  --class=TestSeeder"
+        "serv": "php artisan serv",
+        "seed": "php artisan migrate:refresh && php artisan db:seed  --class=TestSeeder"
     },
     "devDependencies": {
+        "@tailwindcss/custom-forms": "^0.2.1",
         "@tailwindcss/forms": "^0.2.1",
         "@tailwindcss/typography": "^0.3.0",
         "alpinejs": "^2.7.3",
@@ -19,8 +20,14 @@
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
+        "mini-css-extract-plugin": "^1.3.5",
         "postcss": "^8.1.14",
         "postcss-import": "^12.0.1",
-        "tailwindcss": "^2.0.1"
+        "tailwindcss": "^2.0.1",
+        "tailwindcss-ember-power-select": "^0.4.1",
+        "webpack": "^5.18.0"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.2"
     }
 }

@@ -7,6 +7,8 @@
         {{ __('Update your account\'s profile information and email address.') }}
     </x-slot>
 
+
+
     <x-slot name="form">
         <!-- Profile Photo -->
         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
@@ -18,10 +20,12 @@
                             x-on:change="
                                     photoName = $refs.photo.files[0].name;
                                     const reader = new FileReader();
+
                                     reader.onload = (e) => {
                                         photoPreview = e.target.result;
                                     };
                                     reader.readAsDataURL($refs.photo.files[0]);
+
                             " />
 
                 <x-jet-label for="photo" value="{{ __('Photo') }}" />
@@ -60,12 +64,23 @@
             <x-jet-input-error for="name" class="mt-2" />
         </div>
 
+        <!-- Surname -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="surname" value="{{ __('Surname') }}" />
+            <x-jet-input id="surname" type="text" class="mt-1 block w-full" wire:model.defer="state.surname" autocomplete="surname" />
+
+            <x-jet-input-error for="surname" class="mt-2" />
+        </div>
+
+
+
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="email" value="{{ __('Email') }}" />
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
+
     </x-slot>
 
     <x-slot name="actions">

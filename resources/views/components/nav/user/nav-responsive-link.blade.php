@@ -15,23 +15,23 @@
 
     <div class="mt-3 space-y-1">
         <!-- Account Management -->
-        <x-jet-responsive-nav-link href="{{ route('profile.show') }}"
+        <x-jet-responsive-nav-link href="{{ route('profile.show', app()->getLocale()) }}"
                                    :active="request()->routeIs('profile.show')">
             {{ __('Profile') }}
         </x-jet-responsive-nav-link>
 
         @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-            <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}"
+            <x-jet-responsive-nav-link href="{{ route('api-tokens.index', app()->getLocale()) }}"
                                        :active="request()->routeIs('api-tokens.index')">
                 {{ __('API Tokens') }}
             </x-jet-responsive-nav-link>
         @endif
 
     <!-- Authentication -->
-        <form method="POST" action="{{ route('logout') }}">
+        <form method="POST" action="{{ route('logout', app()->getLocale()) }}">
             @csrf
 
-            <x-jet-responsive-nav-link href="{{ route('logout') }}"
+            <x-jet-responsive-nav-link href="{{ route('logout', app()->getLocale()) }}"
                                        onclick="event.preventDefault();
                                     this.closest('form').submit();">
                 {{ __('Logout') }}
@@ -47,13 +47,13 @@
             </div>
 
             <!-- Team Settings -->
-            <x-jet-responsive-nav-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}"
+            <x-jet-responsive-nav-link href="{{ route('teams.show', Auth::user()->currentTeam->id, app()->getLocale()) }}"
                                        :active="request()->routeIs('teams.show')">
                 {{ __('Team Settings') }}
             </x-jet-responsive-nav-link>
 
             @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                <x-jet-responsive-nav-link href="{{ route('teams.create') }}"
+                <x-jet-responsive-nav-link href="{{ route('teams.create', app()->getLocale()) }}"
                                            :active="request()->routeIs('teams.create')">
                     {{ __('Create New Team') }}
                 </x-jet-responsive-nav-link>

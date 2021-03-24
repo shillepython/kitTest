@@ -1,7 +1,9 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <a href=" {{ route('welcome', app()->getLocale()) }}">
+                <img src="{{ asset('storage/logo/logo.png') }}" alt="" class="w-24 h-24">
+            </a>
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -12,7 +14,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login', app()->getLocale()) }}">
             @csrf
 
             <div>
@@ -34,7 +36,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request', app()->getLocale()) }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
